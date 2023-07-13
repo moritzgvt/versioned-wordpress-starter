@@ -1,8 +1,12 @@
 # Versioned Wordpress Theme
 
-Versioned WOrdpress theme with Webpack build and Github Actions deploy pipeline to deploy to your hosting.
+![](screenshot.png)
+
+Versioned Wordpress theme with Webpack build and Github Actions deploy pipeline to deploy to your hosting.
 
 This is a low-fi boilerplate to start developing a wordpress theme with versioning and automated deployment. In the following you will find a description on how to setup and use it. Hope this makes your work a bit faster and cleaner :kissing_heart:
+
+---
 
 ## Prerequisites
 
@@ -12,35 +16,43 @@ This is a low-fi boilerplate to start developing a wordpress theme with versioni
 4. Hosting with SSH Access (Wordpress already installed)
 5. Empty Github repository
 
+---
 
 ## Usage
 
-1. Fork this repository
+### 1. Fork it
 
-2. Clone your fork to the theme folder of your local wordpress installation
+Fork this repository.
+
+### 2. Clone your fork to the theme folder of your local wordpress installation
 ``` sh
 cd your-wp-root-folder/wp-content/themes
 git clone git@github.com:moritzgvt/versioned-wordpress-starter.git
 ```
 
-2. Install dependencies 
+### 2. Install dependencies 
 ``` sh
 npm install
 ```
 
-3. Start development build process
+### 3. Start development build process
 ``` sh
 npm run start
 ```
 
-4. Make changes and commit them
+### 4. Working with it
 
+Make changes and commit them. If you want to add additional folders, you need to add them in the Webpack config file
+
+---
 
 ## Deployment
 
-1. Create an empty theme folder inside the themes folder on your hosting (eg. `my-theme`)
+### 1. Create target
 
-2. Add the deployment secrets to your repository
+Create an empty theme folder inside the themes folder on your hosting (eg. `my-theme`)
+
+### 2. Add the deployment secrets to your repository
 
 **REMOTE_PRIVATE_KEY**
 
@@ -70,9 +82,14 @@ The path to your wp theme folder, normally something like this:
 `html/worpdress/wp-content/themes/my-theme`
 
 
-3. Go to your Github repository and trigger the deployment in the `Actions` tab.
+### 3. Trigger the deployment
 
-4. If the deployment was successful log in to your Wordpress instance and activate the theme.
+Go to your Github repository and trigger the deployment in the `Actions` tab.
+
+### 4. Active the theme
+
+After the first successful workflow run you can log into your Wordpress instance and activate the theme.
+If links are not working go to `Settings > Permalinks` and save your desired settings.
 
 > **Note**: 
-> If links are not working go to `Settings > Permalinks` and save your desired settings.
+> If you're having regular changes it might make sense to have some kind of staging where the deployment goes. And a hoster-side plublishing process.
