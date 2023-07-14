@@ -2,7 +2,7 @@
 
 ![](screenshot.png)
 
-Versioned Wordpress theme with Webpack build and Github Actions deploy pipeline to deploy to your hosting.
+Versioned Wordpress theme with Webpack build and Github Actions workflow to deploy to your hosting.
 
 This is a low-fi boilerplate to start developing a wordpress theme with versioning and automated deployment. In the following you will find a description on how to setup and use it. Hope this makes your work a bit faster and cleaner :kissing_heart:
 
